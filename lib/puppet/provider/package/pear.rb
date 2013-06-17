@@ -116,7 +116,7 @@ Puppet::Type.type(:package).provide :pear, :parent => Puppet::Provider::Package 
 
   def install(useversion = true)
 
-    command = ["install", "--force"]
+    command = ["upgrade", "--force"]
 
     # Channel provided
     if source = @resource[:source]
